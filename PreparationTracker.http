@@ -1,0 +1,6 @@
+@PreparationTracker_HostAddress = http://localhost:5208
+
+GET {{PreparationTracker_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
