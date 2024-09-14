@@ -18,11 +18,19 @@ namespace PreparationTracker.Data
             modelBuilder.Entity<Topic>()
                 .HasMany(t => t.Problems)
                 .WithOne(p => p.Topic)
-                .HasForeignKey(p => p.TopicGuid).OnDelete(DeleteBehavior.Cascade);
+                .HasForeignKey(p => p.TopicGuid)
+                .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Topic>()
-           .HasIndex(t => t.Name)
-           .IsUnique();
+                .HasOne(t => t.Parent)
+                .WithMany(t => t.SubTopics)
+                .HasForeignKey(t => t.ParentId)
+                .OnDelete(DeleteBehavior.Restrict); // Use Restrict instead of Cascade
+
+
+            modelBuilder.Entity<Topic>()
+                .HasIndex(t => t.Name)
+                .IsUnique();
         }
 
     }

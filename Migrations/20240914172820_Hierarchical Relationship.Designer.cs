@@ -12,8 +12,8 @@ using PreparationTracker.Data;
 namespace PreparationTracker.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240827082633_Version2")]
-    partial class Version2
+    [Migration("20240914172820_Hierarchical Relationship")]
+    partial class HierarchicalRelationship
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -48,6 +48,9 @@ namespace PreparationTracker.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid?>("ParentTopicId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<int>("RequireReWork")
                         .HasColumnType("int");
 
@@ -80,6 +83,9 @@ namespace PreparationTracker.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<Guid?>("ParentId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<int>("QuestionSolved")
                         .HasColumnType("int");
 
@@ -93,6 +99,8 @@ namespace PreparationTracker.Migrations
 
                     b.HasIndex("Name")
                         .IsUnique();
+
+                    b.HasIndex("ParentId");
 
                     b.ToTable("Topics");
                 });
@@ -110,7 +118,19 @@ namespace PreparationTracker.Migrations
 
             modelBuilder.Entity("PreparationTracker.Model.Topic", b =>
                 {
+                    b.HasOne("PreparationTracker.Model.Topic", "Parent")
+                        .WithMany("SubTopics")
+                        .HasForeignKey("ParentId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Parent");
+                });
+
+            modelBuilder.Entity("PreparationTracker.Model.Topic", b =>
+                {
                     b.Navigation("Problems");
+
+                    b.Navigation("SubTopics");
                 });
 #pragma warning restore 612, 618
         }

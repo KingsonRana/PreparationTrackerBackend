@@ -137,3 +137,4 @@ C:\Users\SSC\source\repos\PreparationTracker\obj\Debug\net8.0\refint\Preparation
 C:\Users\SSC\source\repos\PreparationTracker\obj\Debug\net8.0\PreparationTracker.pdb
 C:\Users\SSC\source\repos\PreparationTracker\obj\Debug\net8.0\PreparationTracker.genruntimeconfig.cache
 C:\Users\SSC\source\repos\PreparationTracker\obj\Debug\net8.0\ref\PreparationTracker.dll
+C:\Users\SSC\source\repos\PreparationTracker\obj\Debug\net8.0\PreparationTracker.sourcelink.json

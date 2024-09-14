@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PreparationTracker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd6913d5d61a3dd78c5d40abbf12b04f2ae65f9b")]
 [assembly: System.Reflection.AssemblyProductAttribute("PreparationTracker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PreparationTracker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,5 +8,7 @@ namespace PreparationTracker.DTO.RequestDTO
         public string Name { get; set; }
         [Required]
         public int minQuestion { get; set; }
+
+        public Guid? ParentId {  get; set; }
     }
 }

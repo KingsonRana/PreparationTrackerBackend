@@ -3,6 +3,7 @@
     public class ProblemsResponseDto
     {
         public int Id { get; set; }
+        public Guid Guid { get; set; }
         public string Name { get; set; } 
         public PreparationTracker.Enum.ProblemLevel Level { get; set; }
         public string Link { get; set; }
