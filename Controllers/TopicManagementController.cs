@@ -32,7 +32,7 @@ namespace PreparationTracker.Controllers
             return Ok(response);
         }
 
-        [HttpGet("/getSubTopics/{id}")]
+        [HttpGet("/getSubTopics/{id}/subTopic")]
         public async Task<ActionResult<IEnumerable<TopicResponseDto>>> GetTopics(Guid id)
         {
             var topics = await _context.Topics.Include(t=>t.SubTopics).FirstOrDefaultAsync(t => t.Guid == id);
