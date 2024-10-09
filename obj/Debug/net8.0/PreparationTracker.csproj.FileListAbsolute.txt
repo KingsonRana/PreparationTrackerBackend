@@ -10,6 +10,7 @@ C:\Users\SSC\source\repos\PreparationTracker\bin\Debug\net8.0\AutoMapper.Extensi
 C:\Users\SSC\source\repos\PreparationTracker\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\SSC\source\repos\PreparationTracker\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\SSC\source\repos\PreparationTracker\bin\Debug\net8.0\Humanizer.dll
+C:\Users\SSC\source\repos\PreparationTracker\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\SSC\source\repos\PreparationTracker\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\SSC\source\repos\PreparationTracker\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 C:\Users\SSC\source\repos\PreparationTracker\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -123,6 +124,7 @@ C:\Users\SSC\source\repos\PreparationTracker\obj\Debug\net8.0\PreparationTracker
 C:\Users\SSC\source\repos\PreparationTracker\obj\Debug\net8.0\PreparationTracker.csproj.CoreCompileInputs.cache
 C:\Users\SSC\source\repos\PreparationTracker\obj\Debug\net8.0\PreparationTracker.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\SSC\source\repos\PreparationTracker\obj\Debug\net8.0\PreparationTracker.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\SSC\source\repos\PreparationTracker\obj\Debug\net8.0\PreparationTracker.sourcelink.json
 C:\Users\SSC\source\repos\PreparationTracker\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\SSC\source\repos\PreparationTracker\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\SSC\source\repos\PreparationTracker\obj\Debug\net8.0\staticwebassets\msbuild.PreparationTracker.Microsoft.AspNetCore.StaticWebAssets.props
@@ -137,4 +139,3 @@ C:\Users\SSC\source\repos\PreparationTracker\obj\Debug\net8.0\refint\Preparation
 C:\Users\SSC\source\repos\PreparationTracker\obj\Debug\net8.0\PreparationTracker.pdb
 C:\Users\SSC\source\repos\PreparationTracker\obj\Debug\net8.0\PreparationTracker.genruntimeconfig.cache
 C:\Users\SSC\source\repos\PreparationTracker\obj\Debug\net8.0\ref\PreparationTracker.dll
-C:\Users\SSC\source\repos\PreparationTracker\obj\Debug\net8.0\PreparationTracker.sourcelink.json

@@ -10,6 +10,8 @@ namespace PreparationTracker.Data
 
         public DbSet<Topic> Topics { get; set; }
         public DbSet<Problems> Problems { get; set; }
+        public DbSet<Exam> Exam { get; set; }
+        public DbSet<User> Users { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -31,6 +33,29 @@ namespace PreparationTracker.Data
             modelBuilder.Entity<Topic>()
                 .HasIndex(t => t.Name)
                 .IsUnique();
+
+            modelBuilder.Entity<Topic>()
+                .HasOne(t => t.Exam)
+                .WithMany(e => e.Topics)
+                .HasForeignKey(t => t.ExamId);
+
+            modelBuilder.Entity<Exam>()
+                .HasIndex(e => e.ExamName)
+                .IsUnique();
+
+            modelBuilder.Entity<User>()
+              .HasIndex(u => u.Email)
+              .IsUnique(); // Enforcing unique constraint on Email
+
+            modelBuilder.Entity<User>()
+                .HasIndex(u => u.Phone)
+                .IsUnique(); // Enforcing unique constraint on Phone
+
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.Exams)
+                .WithOne(e => e.User)
+                .HasForeignKey(e => e.UserId); // Cascade delete - deleting user will delete their exams
+
         }
 
     }

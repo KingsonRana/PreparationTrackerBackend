@@ -10,12 +10,22 @@ namespace PreparationTracker.Mapping
         public MappingProfile()
         {
             // Topic mappings
-            CreateMap<Topic, TopicRequestDto>().ReverseMap();
-            CreateMap<Topic, TopicResponseDto>();
+            CreateMap<TopicRequestDto, Topic>().ReverseMap();
+            CreateMap<Topic, TopicResponseDto>().ReverseMap();
 
             // Problems mappings
-            CreateMap<Problems, ProblemsRequestDto>().ReverseMap();
-            CreateMap<Problems, ProblemsResponseDto>();
+            CreateMap<ProblemsRequestDto, Problems>().ReverseMap();
+            CreateMap<Problems, ProblemsResponseDto>().ReverseMap();
+
+            CreateMap<ExamRequestDto, Exam>().ReverseMap();
+            CreateMap<Exam, ExamResponseDto>().ReverseMap();
+
+            CreateMap<UserSignupRequestDto, User>().ReverseMap();
+            CreateMap<User, UserLogInResponseDto>().ReverseMap();
+            CreateMap<User, UserDetailDto>().ReverseMap();
+            CreateMap<UserUpdateRequestDto,User>().ReverseMap();
+
+
         }
     }
 }

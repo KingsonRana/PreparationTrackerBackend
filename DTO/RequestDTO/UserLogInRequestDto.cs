@@ -2,12 +2,12 @@
 
 namespace PreparationTracker.DTO.RequestDTO
 {
-    public class TopicRequestDto
+    public class UserLogInRequestDto
     {
         [Required]
-        public string Name { get; set; }
+        public string Email { get; set; }
+  
         [Required]
-        public int minQuestion { get; set; }
-
+        public string Password { get; set; }
     }
 }
